@@ -1,6 +1,6 @@
 # 📅 2026-10-07 | 0일차 TIL 기본형식
 
-> 📒 전체 정리: [노션 TIL](https://노션주소)
+> 📒 전체 정리: [노션 TIL](https://app.notion.com/p/LG-CNS-7-TIL-3f1ec3dceb8b8002b98de0f1bac5c7f3?source=copy_link)
 
 ---
 
@@ -14,14 +14,22 @@
 ```bash
 git switch -c feature/login   # 브랜치 만들고 바로 이동
 ```
+- 커밋 시 말머리 뜻
+
+| 말머리 | 언제 |
+| --- | --- |
+| docs |	문서(README, TIL 글) 추가·수정 |
+| feat |	새 코드·기능 추가 (실습 코드) |
+| fix	| 틀린 것 고침 |
+| chore |	폴더 정리, 설정 파일 등 내용과 무관한 작업 |
 
 ## 🚧 막힌 점
 
-... # 깃허브 전용 강조박스
+### 깃허브 전용 강조박스
 > [!WARNING]
 > push 거부됨 → 원격에 먼저 올라간 커밋이 있었음
 
-... # 눌러서 펼치는 토글
+### 눌러서 펼치는 토글
 <details>
 <summary>해결 과정 보기</summary>
 
