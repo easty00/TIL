@@ -221,3 +221,7 @@ __marimo__/
 
 # Claude
 .claude/
+CLAUDE.md
+
+# lesson_replay
+lesson_replay/
