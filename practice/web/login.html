@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--html 작성 후 " html:5 " 선택 시 템플릿 생성됨.-->
+<!--태그 형식으로 이루어진다-->
+<!--Root태그를 기반으로 헤더 정보와 바디정보 영역으로 나뉘어있다-->
+<html lang="en">
+  <!--태그는 특정한 속성 값을 갖는다-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 주석 : CSS연결 -->
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+<body> <!--들여쓰기에 주의!-->
+  <!---body 안에 div가, div 안에 또다른 태그들이 중첩되어있다-->
+  <div class="login-container">
+    <h2>로그인</h2>
+    <form id="loginForm">
+      <!--프로그램언어는 대소문자로 구별한다.-->
+      <input type="text" id="username" placeholder="아이디" required>
+      <input type="password" id="password" placeholder="비밀번호" required>
+      <button type="submit">로그인</button>
+    </form>
+    <p id="message"></p>
+  </div>  
+
+  <!-- Javascript 연결 -->
+  <script src="./script/login.js"></script>
+</body>
+</html>
+
+<!--
+css, script 폴더 생성
+프로젝트 관리시 : script와 css 는 효율을 위해 따로 분리하여 폴더별로 관리
+-->
