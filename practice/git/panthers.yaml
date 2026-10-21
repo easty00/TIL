@@ -2,7 +2,11 @@ team: Panthers
 
 manager: Sebastian
 
+<<<<<<< HEAD
 coach : Nicholas
+=======
+coach: Melissa
+>>>>>>> 98c08e7 (study: edit panthers)
 
 members:
 - Violet
