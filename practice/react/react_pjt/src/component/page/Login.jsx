@@ -1,7 +1,8 @@
 import React, { useState } from 'react' ;
+// 양방향 데이터 상태관리를 위해 훅을 사용함 : { useState }
 import axios from "axios"
+import { useNavigate } from 'react-router-dom' ;
 
-// 양방향 데이터 상태관리를 위해 훅을 사용함 
 import '../css/Login.css' ;
 
 // function Login() { } 을 사용할 수도 있지만 화살표 함수 사용을 추천
@@ -9,9 +10,10 @@ import '../css/Login.css' ;
 const Login = () => {
 
   // 훅을 이용한 변수와 상태관리 변수 활용
-  const [userId, setUserId] = useState("");
+  const [userId, setUserId]     = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError]       = useState("");
+  const moveUrl = useNavigate();
 
   //handler 정의
   const handleSubmit = async (e) => {
@@ -31,15 +33,20 @@ const Login = () => {
     //   setError("아이디 또는 비밀번호가 올바르지 않습니다.") ;
     // }
 
-    // 로그인 API 요청
-    const response = await axios.post("http://localhost:8080/api/login", {
-      username: userId,
-      password: password,
-    });
+    // // 로그인 API 요청
+    // const response = await axios.post("http://localhost:8080/api/login", {
+    //   username: userId,
+    //   password: password,
+    // });
     
-    const token = response.data.token ;
-    localStorage.setItem('token', token)
-    
+    // const token = response.data.token ;
+    // localStorage.setItem('token', token)
+
+    alert('로그인 성공') ;
+    setError('') ;
+
+    // react-router-dom 을 이용해 이동하거나, window.location.href를 이용할 수 있음
+    moveUrl('/welcome', { state : { username : userId }}) ;
   }
 
   // return 을 이용해 html 작성하여 출력 가능
