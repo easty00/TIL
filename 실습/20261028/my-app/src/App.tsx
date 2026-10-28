@@ -1,14 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import { Ticks } from './components/Ticks'
 
 function App() {
   const [count, setCount] = useState(0)
+  useEffect(() => {
+    setCount(Number("1")); // number 타입으로 선언하지 않으면 1111 이 된다
+  }, []);
+
+  // let cnt = 0;
 
   return (
-    <>
+    <Fragment>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -30,7 +36,8 @@ function App() {
         </button>
       </section>
 
-      <div className="ticks"></div>
+      {/* Ticks 컴포넌트 추가 */}
+      <Ticks /> 
 
       <section id="next-steps">
         <div id="docs">
@@ -113,9 +120,9 @@ function App() {
         </div>
       </section>
 
-      <div className="ticks"></div>
+      <Ticks /> 
       <section id="spacer"></section>
-    </>
+    </Fragment>
   )
 }
 
