@@ -1,38 +1,47 @@
-@import font.css;
-@import color.css;
+@import 'color.css';
+@import 'font.css';
 
-#btn01.mybtn {
-    background-color: #f0f0f0;
-}
-/** 버튼 스타일. 이런식으로 종속시키는 경우 의존성 때문에 다른곳에 활용하기 어렵다 */
-
-/** 요즘 클라이언트가 좋아하는 스타일 */
 .container>#btn01.mybtn {
     width: fit-content;
-    background-color: 000;
+    background-color: #000;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
     transition: all 0.3s ease;
     &:hover {
-        background-color: #f0f0f0;
+        background-color: #fff;
         color: #000;
-    } /** 한때 각광받던 SCSS 문법. 요즘은 잘 안쓰는 추세 */
+    }
 }
 
 .container>#btn01.mybtn:hover {
-    background-color: #f0f0f0;
+    background-color: #fff;
     color: #000;
 }
+
 .container {
     background-color: red;
     padding: 10px;
 }
 
-.input[type="text"] {
-    border: 1px solid #ccc;
-    padding: 5px;
-    border-radius: 3px;
-    width: 200px;
+h1 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
 }
+
+p {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-primary);
+}
+
+.input01 {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+/*  */

@@ -13,7 +13,8 @@
     <title>Document</title>
     <link rel=""stylesheet" href="style.css"> <!-- css파일 불러오기 -->
 </head>
-<body> /** 컴포넌트로 이루어져있음. 이들의 코드를 제각각 수정하는 방식으로 수정하기보단 구조를 다시 보고 처음부터 설계를 잘 살피는 것이 좋음 */
+<body>
+    <!-- 컴포넌트로 이루어져있음. 이들의 코드를 제각각 수정하는 방식으로 수정하기보단 구조를 다시 보고 처음부터 설계를 잘 살피는 것이 좋음 -->
     <a href="about.html">
         <h1>H1 제목</h1>
     </a>
@@ -52,5 +53,22 @@
         <input type="email" name="email" placeholder="이메일">
         <input type="submit" value="제출">
     </form> /**해당되는 액션에 동작하게 함.*/
-</body>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function login() {
+            const id = document.querySelector('.input01').value;
+            const password = document.querySelector('.input01').value;
+            console.log(id, password);
+        }
+    </script>
+</head>
+<body>
+    <h1> LOGIN</h1>
+    <form action="" method="post" style="display: flex; flex-direction: column; gap: 10px">
+        <input type="text" class="input01" name="id" placeholder="ID">
+        <input type="password" class="input01" name="password" placeholder="Password">
+        <input type="email" class="input01" name="email" placeholder="Email">
+        <button type="button" class="mybtn" onclick="login()">LOGIN</button>
+    </form>
 </html>
