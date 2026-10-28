@@ -11,9 +11,46 @@
     <meta name="og:url" content=""> <!-- 공유하기를 통해 보여주는 url -->
     <meta name="og:image" content=""> <!-- 공유하기를 통해 보여주는 이미지 -->
     <title>Document</title>
+    <link rel=""stylesheet" href="style.css"> <!-- css파일 불러오기 -->
 </head>
-<body>
-    <h1>H1 제목</h1>
+<body> /** 컴포넌트로 이루어져있음. 이들의 코드를 제각각 수정하는 방식으로 수정하기보단 구조를 다시 보고 처음부터 설계를 잘 살피는 것이 좋음 */
+    <a href="about.html">
+        <h1>H1 제목</h1>
+    </a>
     <p>테스트 페이지입니다.</p>
-    <p>테스트 페이지입니다..</p>
+    <div class="container">
+        <div id="btn01" class="mybtn" onclick="alert('테스트버튼이 클릭됨')">테스트버튼</div>
+    </div>
+    <div>
+        <div onclick="alert('테스트버튼이 클릭됨')" id="btn02" class="mybtn">테스트버튼2</div>
+    </div>
+    <p>테스트 페이지입니다..
+        <span>테스트 페이지입니다!</span>
+    </p>
+    <input type="text" class="input" placeholder="테스트 텍스트 입력">
+    <input type="checkbox" class="checkbox" id="checkbox01">
+    <label for="checkbox01">테스트 체크박스</label>
+    <input type="radio" class="radio" id="radio01" name="radio">
+    <label for="radio01">테스트 라디오버튼</label>
+    <input type="radio" class="radio" id="radio02" name="radio
+">    <label for="radio02">테스트 라디오버튼2</label>
+    <select class="select">
+        <option value="option1">옵션1</option>
+        <option value="option2">옵션2</option>
+        <option value="option3">옵션3</option>
+    </select>
+    <textarea class="textarea" placeholder="테스트 텍스트 영역"></textarea>
+    <input type="file" class="file">
+    <label for="file" class="file-label">파일 선택</label>
+    <inpute type="submit" class="submit" value="제출">
+    <button class="button">제출 버튼</button>
+    <input type class="date" class="date">
+    <label for="date" class="date-label">날짜 선택</label>
+
+    <form action="submit.php" method="post">
+        <input type="text" name="name" placeholder="이름">
+        <input type="email" name="email" placeholder="이메일">
+        <input type="submit" value="제출">
+    </form> /**해당되는 액션에 동작하게 함.*/
 </body>
+</html>
