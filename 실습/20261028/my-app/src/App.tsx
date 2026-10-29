@@ -1,12 +1,12 @@
-import { useState, useEffect, Fragment } from 'react'
-import heroImg from './assets/hero.png'
+import { useState, useEffect, } from 'react'    //  <Fragment> 와 <> 은 동일하므로 삭제
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Ticks from './components/Ticks'
+import CenterHero from './components/CenterHero'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState<number>(0)   //<number> : count, setcount 상태의 타입을 숫자로 정의
   useEffect(() => {
     setCount(Number("1")); // number 타입으로 선언하지 않으면 1111 이 된다
   }, []);
@@ -14,28 +14,8 @@ function App() {
   // let cnt = 0;
 
   return (
-    <Fragment>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>LG CNS 7TH</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
+    <>
+      <CenterHero count={count} setCount={setCount}/>
       {/* Ticks 컴포넌트 추가 */}
       <Ticks /> 
 
@@ -121,8 +101,8 @@ function App() {
       </section>
 
       <Ticks /> 
-      <section id="spacer"></section>
-    </Fragment>
+      <section id="spacer">Count is {count}</section>
+    </>
   )
 }
 

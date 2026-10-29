@@ -1,6 +1,9 @@
+import heroImg from '../assets/hero.png' // assets 에서 그림 가져옴
+import reactLogo from '../assets/react.svg'
+import viteLogo from '../assets/vite.svg'
 
 
-export default function CenterHero() {
+export default function CenterHero({ count, setCount }: {count:number, setCount:(count: number) => void}) {
     return (
       <section id="center">
         <div className="hero">
@@ -17,7 +20,7 @@ export default function CenterHero() {
         <button
           type="button"
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={() => setCount(count + 1)}   //원본은 ((count) => count + 1)
         >
           Count is {count}
         </button>
