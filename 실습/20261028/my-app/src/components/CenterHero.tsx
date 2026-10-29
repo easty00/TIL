@@ -1,6 +1,7 @@
 import heroImg from '../assets/hero.png' // assets 에서 그림 가져옴
 import reactLogo from '../assets/react.svg'
 import viteLogo from '../assets/vite.svg'
+import CountBtn from './CountBtn' // components 폴더
 
 
 export default function CenterHero({ count, setCount }: {count:number, setCount:(count: number) => void}) {
@@ -17,13 +18,7 @@ export default function CenterHero({ count, setCount }: {count:number, setCount:
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount(count + 1)}   //원본은 ((count) => count + 1)
-        >
-          Count is {count}
-        </button>
+        <CountBtn count={count||0} setCount={setCount}/>    {/*컴포넌트로 떼어낸것 이식*/}
       </section>
     )
 }
