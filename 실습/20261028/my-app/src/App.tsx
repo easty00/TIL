@@ -46,16 +46,12 @@ function App() {
           <CountBtn />  {/**버튼 추가 생성. 각자 잘 돌아가는지 확인하기 위함 */}
         </div>
         <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <SocialIconList/>
+          {/* svg 아이콘, h2 Connect with us, p */}
+          <SocialIconList />
+          <CountBtn />
         </div>
       </section>
-
-      <Ticks /> 
+      <Ticks />
       <section id="spacer">
         <CountBtn />
       </section>
