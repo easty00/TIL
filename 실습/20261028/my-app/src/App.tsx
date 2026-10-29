@@ -1,4 +1,4 @@
-import { useState, useEffect, } from 'react'    //  <Fragment> 와 <> 은 동일하므로 삭제
+// import { useState, useEffect, } from 'react'    //  <Fragment> 와 <> 은 동일하므로 삭제. CountBtn이 숫자를 모두 가져가서 필요없게 되어 주석화
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'

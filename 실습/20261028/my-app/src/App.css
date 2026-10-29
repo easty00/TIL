@@ -1,21 +1,73 @@
+@property --orbit {   /** 빙글빙글 돌게 해줄 변수*/
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
 .counter {
+  position: relative; /* 하단에 체인으로 새로 생긴 before의 기준점*/
+  isolation: isolate;
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
   color: var(--accent);
   background: var(--accent-bg);
   border: 2px solid transparent;
-  transition: border-color 0.3s;
+  /*transition: border-color 0.3s;*/
   margin-bottom: 24px;
+  cursor: pointer; /* 버튼 위엥 올리면 마우스 포인터 모양 변경 */
+
+  &::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -3px;
+    border-radius: 8px;
+    padding: 3px;
+    background: conic-gradient( /* 색상 시계방향으로 */
+      from var(--orbit),
+      transparent 0deg,
+      transparent 230deg,
+      #ff9af5 300deg,
+      #fff 332deg,
+      #ff00fb 360deg
+    );
+    mask: /*멀리 퍼지는 빛을 검정으로 마스킹하고 테두리만 번쩍이게*/ 
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    filter: drop-shadow(0 0 6px #ff00fb);
+    opacity: 0;   /*평소엔 안보임*/
+    pointer-events: none;
+    transition: opacity 0.25s ease; /*부드럽게 나타나기*/
+  }
 
   &:hover {
     border-color: var(--accent-border);
+    
+    &::before {
+      opacity: 1;
+      animation: counter-orbit 1.2s linear infinite;
+    }
   }
   &:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
 }
+
+@keyframes counter-orbit {
+  to {
+    --orbit: 1turn;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .counter:hover::before {
+    animation: none;
+  }
+}
+
 
 .hero {
   position: relative;
