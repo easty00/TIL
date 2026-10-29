@@ -4,18 +4,20 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import Ticks from './components/Ticks'
 import CenterHero from './components/CenterHero'
+import CountBtn from './components/CountBtn'  // App에서 필요했던걸 통째로 가져갔으니 import
 
 function App() {
-  const [count, setCount] = useState<number>(0)   //<number> : count, setcount 상태의 타입을 숫자로 정의
-  useEffect(() => {
-    setCount(Number("1")); // number 타입으로 선언하지 않으면 1111 이 된다
-  }, []);
+  // useState를 버튼으로 가져감
+  // useEffect(() => {
+  //   setCount(Number("1")); // number 타입으로 선언하지 않으면 1111 이 된다. CountBtn에서 부품들 가져갔기에 주석화
+  // }, []); 
 
   // let cnt = 0;
 
   return (
     <>
-      <CenterHero count={count} setCount={setCount}/>
+      {/* CenterHero 컴포넌트 추가 */}
+      <CenterHero />
       {/* Ticks 컴포넌트 추가 */}
       <Ticks /> 
 
@@ -40,6 +42,7 @@ function App() {
               </a>
             </li>
           </ul>
+          <CountBtn />  {/**버튼 추가 생성. 각자 잘 돌아가는지 확인하기 위함 */}
         </div>
         <div id="social">
           <svg className="icon" role="presentation" aria-hidden="true">
@@ -101,7 +104,9 @@ function App() {
       </section>
 
       <Ticks /> 
-      <section id="spacer">Count is {count}</section>
+      <section id="spacer">
+        <CountBtn />
+      </section>
     </>
   )
 }
