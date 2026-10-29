@@ -1,53 +1,35 @@
 
+import GithubIcon from "./svg/GithubIcon"
+
+import XIcon from "./svg/XIcon"
+import BlueskyIcon from "./svg/BlueskyIcon"
+import DiscordIcon from "./svg/DiscordIcon"
+
 export default function SocialIconList() {
     
     return(
           <ul>
             <li>
               <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
+                <GithubIcon/>
                 GitHub
               </a>
             </li>
             <li>
               <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
+                <DiscordIcon/>
                 Discord
               </a>
             </li>
             <li>
               <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
+                <XIcon/>
                 X.com
               </a>
             </li>
             <li>
               <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
+                <BlueskyIcon/>
                 Bluesky
               </a>
             </li>
