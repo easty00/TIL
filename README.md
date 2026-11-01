@@ -54,3 +54,4 @@ TIL/
 | [10.27](./TIL/본과정/2026-10-27.md) | 3일차 AI 서비스를 위한 프론트엔드 (HTML · CSS · JS · Node.js · React · Next.js) |
 | [10.28](./TIL/본과정/2026-10-28.md) | 4일차 AI 서비스를 위한 프론트엔드 2 (HTML · CSS · TypeScript · React 컴포넌트) |
 | [10.29](./TIL/본과정/2026-10-29.md) | 5일차 AI 서비스를 위한 프론트엔드 3 (Next.js · Tailwind · 아토믹 디자인) |
+| [10.30](./TIL/본과정/2026-10-30.md) | 6일차 AI 서비스를 위한 프론트엔드 4 (HTML · JS 로딩 · Next 동적 라우팅 · searchParams · shadcn), AI 에이전트 특강 (Orca) |
