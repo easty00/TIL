@@ -57,3 +57,4 @@ TIL/
 | [10.30](./TIL/본과정/2026-10-30.md) | 6일차 AI 서비스를 위한 프론트엔드 4 (HTML · JS 로딩 · Next 동적 라우팅 · searchParams · shadcn), AI 에이전트 특강 (Orca) |
 | [11.02](./TIL/본과정/2026-11-02.md) | 7일차 AI 서비스를 위한 프론트엔드 5 (Next 서버 액션 로그인 폼 · Zod · REST API · Prisma · MongoDB) |
 | [11.03](./TIL/본과정/2026-11-03.md) | 8일차 AI 서비스를 위한 프론트엔드 6 (NextAuth 세션 로그인 · OAuth · 단계별 회원가입 · 서버 액션 드래프트 · 스켈레톤 · searchParams) |
+| [11.04](./TIL/본과정/2026-11-04.md) | 9일차 AI 서비스를 위한 프론트엔드 7 (카카오·구글 로그인 · Proxy · useTransition · 캐시) |
