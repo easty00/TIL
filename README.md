@@ -68,3 +68,4 @@ TIL/
 | [11.16](./TIL/본과정/2026-11-16.md) | 17일차 AI 서비스 개발을 위한 백엔드 I 1일차 (백엔드 과정 소개 · React vs Next · Vite · JDK·JRE·JVM · GitHub CLI · UML 클래스 다이어그램 · 캡슐화 · 생성자) |
 | [11.17](./TIL/본과정/2026-11-17.md) | 18일차 AI 서비스 개발을 위한 백엔드 I 2일차 (Java EE · javax → jakarta · WAS · toString · 사용자 정의 예외 · 배열 · static · 실습2 PersonManager · OWASP Top 10 · 컬렉션 · 제네릭) |
 | [11.18](./TIL/본과정/2026-11-18.md) | 19일차 AI 서비스 개발을 위한 백엔드 I 3일차 (오버로딩 · super와 this · ArrayList · 상속 · 리팩토링 · 추상 클래스 · RAG · 다형성 · Heterogeneous Collection · 인터페이스 · Maven·Gradle · 스프링 프레임워크 · 프레임워크와 라이브러리) |
+| [11.19](./TIL/본과정/2026-11-19.md) | 20일차 AI 서비스 개발을 위한 백엔드 I 4일차 (스프링 삼각형 · POJO · 설정 파일 형식 · IoC·DL·DI · BeanFactory·ApplicationContext · Setter Injection · spring-beans.xml · jUnit 5 · getBean · assert · singleton·prototype · @BeforeEach · Constructor Injection · spring-test · 빈 등록 전략) |
